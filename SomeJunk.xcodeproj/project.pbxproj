@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB7815B51DC0B63F002DE284 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815B41DC0B63F002DE284 /* AppDelegate.swift */; };
-		FB7815B71DC0B63F002DE284 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815B61DC0B63F002DE284 /* ViewController.swift */; };
+		FB7815B71DC0B63F002DE284 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815B61DC0B63F002DE284 /* MainVC.swift */; };
 		FB7815BA1DC0B63F002DE284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7815B81DC0B63F002DE284 /* Main.storyboard */; };
 		FB7815BD1DC0B63F002DE284 /* SomeJunk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB7815BB1DC0B63F002DE284 /* SomeJunk.xcdatamodeld */; };
 		FB7815BF1DC0B63F002DE284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7815BE1DC0B63F002DE284 /* Assets.xcassets */; };
@@ -21,12 +21,14 @@
 		FB7815D61DC0BF0B002DE284 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815CE1DC0BF0B002DE284 /* Item.swift */; };
 		FB7815D71DC0BF0B002DE284 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815CF1DC0BF0B002DE284 /* Store+CoreDataProperties.swift */; };
 		FB7815D81DC0BF0B002DE284 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815D01DC0BF0B002DE284 /* Store.swift */; };
+		FB7815DE1DC0E09F002DE284 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815DD1DC0E09F002DE284 /* MaterialView.swift */; };
+		FB7815E01DC0E293002DE284 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7815DF1DC0E293002DE284 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB7815B11DC0B63F002DE284 /* SomeJunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeJunk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7815B41DC0B63F002DE284 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB7815B61DC0B63F002DE284 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB7815B61DC0B63F002DE284 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FB7815B91DC0B63F002DE284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB7815BC1DC0B63F002DE284 /* SomeJunk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SomeJunk.xcdatamodel; sourceTree = "<group>"; };
 		FB7815BE1DC0B63F002DE284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		FB7815CE1DC0BF0B002DE284 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FB7815CF1DC0BF0B002DE284 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FB7815D01DC0BF0B002DE284 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		FB7815DD1DC0E09F002DE284 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		FB7815DF1DC0E293002DE284 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,6 @@
 		FB7815A81DC0B63F002DE284 = {
 			isa = PBXGroup;
 			children = (
-				FB7815D91DC0BF11002DE284 /* Model */,
-				FB7815D01DC0BF0B002DE284 /* Store.swift */,
 				FB7815B31DC0B63F002DE284 /* SomeJunk */,
 				FB7815B21DC0B63F002DE284 /* Products */,
 			);
@@ -74,8 +76,10 @@
 		FB7815B31DC0B63F002DE284 /* SomeJunk */ = {
 			isa = PBXGroup;
 			children = (
+				FB7815DC1DC0E085002DE284 /* Views */,
+				FB7815D91DC0BF11002DE284 /* Model */,
 				FB7815B41DC0B63F002DE284 /* AppDelegate.swift */,
-				FB7815B61DC0B63F002DE284 /* ViewController.swift */,
+				FB7815B61DC0B63F002DE284 /* MainVC.swift */,
 				FB7815B81DC0B63F002DE284 /* Main.storyboard */,
 				FB7815BE1DC0B63F002DE284 /* Assets.xcassets */,
 				FB7815C01DC0B63F002DE284 /* LaunchScreen.storyboard */,
@@ -91,9 +95,11 @@
 				FB7815CA1DC0BF0B002DE284 /* Image.swift */,
 				FB7815CC1DC0BF0B002DE284 /* ItemType.swift */,
 				FB7815CE1DC0BF0B002DE284 /* Item.swift */,
+				FB7815D01DC0BF0B002DE284 /* Store.swift */,
 				FB7815DA1DC0BF17002DE284 /* Generated */,
 			);
 			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FB7815DA1DC0BF17002DE284 /* Generated */ = {
@@ -105,6 +111,15 @@
 				FB7815CF1DC0BF0B002DE284 /* Store+CoreDataProperties.swift */,
 			);
 			name = Generated;
+			sourceTree = "<group>";
+		};
+		FB7815DC1DC0E085002DE284 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB7815DD1DC0E09F002DE284 /* MaterialView.swift */,
+				FB7815DF1DC0E293002DE284 /* ItemCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7815E01DC0E293002DE284 /* ItemCell.swift in Sources */,
 				FB7815D41DC0BF0B002DE284 /* ItemType.swift in Sources */,
 				FB7815D61DC0BF0B002DE284 /* Item.swift in Sources */,
-				FB7815B71DC0B63F002DE284 /* ViewController.swift in Sources */,
+				FB7815B71DC0B63F002DE284 /* MainVC.swift in Sources */,
+				FB7815DE1DC0E09F002DE284 /* MaterialView.swift in Sources */,
 				FB7815D51DC0BF0B002DE284 /* Item+CoreDataProperties.swift in Sources */,
 				FB7815BD1DC0B63F002DE284 /* SomeJunk.xcdatamodeld in Sources */,
 				FB7815D71DC0BF0B002DE284 /* Store+CoreDataProperties.swift in Sources */,

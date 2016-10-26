@@ -12,6 +12,10 @@ import CoreData
 
 class Item: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+    // it's in the context, this will be called and will give it a date created
+    override func awakeFromInsert() {
+        super.awakeFromInsert()
+        self.created = NSDate()
+    }
 
 }
