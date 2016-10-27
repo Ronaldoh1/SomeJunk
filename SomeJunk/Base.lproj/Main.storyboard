@@ -28,11 +28,11 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="476"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="136" id="cm2-eZ-zsu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemCell" rowHeight="136" id="cm2-eZ-zsu" customClass="ItemCell" customModule="SomeJunk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cm2-eZ-zsu" id="MYf-P9-2eh">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="135.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3l-6s-XX5">
@@ -98,8 +98,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="7JQ-Sa-6CZ" id="3Ja-ag-gbH"/>
+                                            <outlet property="priceLabel" destination="Qei-Qi-omf" id="gI5-1s-IO5"/>
+                                            <outlet property="thumbImage" destination="P2X-ld-jBb" id="Om8-6u-89h"/>
+                                            <outlet property="titleLabel" destination="MQJ-r5-0aM" id="vhz-im-pW3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TNd-gD-85q"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1gn-Ny-8xS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -117,6 +127,10 @@
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="YT3-EI-RXG"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="ZRf-lJ-M2C" id="HR7-5E-vAX"/>
+                        <outlet property="tableView" destination="rPD-UL-ETK" id="qSn-26-DDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
